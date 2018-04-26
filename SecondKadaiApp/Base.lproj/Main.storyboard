@@ -1,24 +1,129 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HiraginoKakuGothic.ttc">
+            <string>HiraginoSans-W3</string>
+            <string>HiraginoSans-W6</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SecondKadaiApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名前を入力してください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qQ-uB-fAp" userLabel="labelName">
+                                <rect key="frame" x="50" y="70" width="220" height="17"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="山田太郎" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yzq-lG-Zww" userLabel="txtName">
+                                <rect key="frame" x="50" y="107" width="220" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zg7-aE-UPb" userLabel="btnResult">
+                                <rect key="frame" x="50" y="187" width="220" height="44"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="DdV-C4-PMb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
+                                <state key="normal" title="あいさつ">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="unwind:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f8r-1r-KCT"/>
+                                    <segue destination="Lha-JU-WDa" kind="show" animates="NO" id="e1F-To-A7X"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Yzq-lG-Zww" firstAttribute="trailing" secondItem="0qQ-uB-fAp" secondAttribute="trailing" id="6vQ-vs-YZg"/>
+                            <constraint firstItem="Zg7-aE-UPb" firstAttribute="trailing" secondItem="0qQ-uB-fAp" secondAttribute="trailing" id="Fud-nZ-WwJ"/>
+                            <constraint firstItem="0qQ-uB-fAp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="JvA-c0-0l3"/>
+                            <constraint firstItem="Zg7-aE-UPb" firstAttribute="leading" secondItem="0qQ-uB-fAp" secondAttribute="leading" id="YnB-5l-9Bt"/>
+                            <constraint firstItem="Yzq-lG-Zww" firstAttribute="top" secondItem="0qQ-uB-fAp" secondAttribute="bottom" constant="20" id="eRP-hA-vFB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0qQ-uB-fAp" secondAttribute="trailing" constant="50" id="hKl-Y1-8en"/>
+                            <constraint firstItem="Zg7-aE-UPb" firstAttribute="top" secondItem="Yzq-lG-Zww" secondAttribute="bottom" constant="50" id="l9D-Ra-pZc"/>
+                            <constraint firstItem="Yzq-lG-Zww" firstAttribute="leading" secondItem="0qQ-uB-fAp" secondAttribute="leading" id="sTH-Ew-K5a"/>
+                            <constraint firstItem="0qQ-uB-fAp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="yOk-Hp-n9P"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="btnResult" destination="Zg7-aE-UPb" id="c7a-qj-7XJ"/>
+                        <outlet property="labelName" destination="0qQ-uB-fAp" id="m01-n1-JQK"/>
+                        <outlet property="txtName" destination="Yzq-lG-Zww" id="vXQ-BJ-ZL8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="116.25" y="118.30985915492958"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="1EW-ib-JSr">
+            <objects>
+                <viewController id="Lha-JU-WDa" customClass="ResultViewController" customModule="SecondKadaiApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a6U-0g-SiP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="こんにちは" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CRl-P2-u4z" userLabel="labelHello">
+                                <rect key="frame" x="10" y="70" width="300" height="20"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tGo-4G-xod">
+                                <rect key="frame" x="50" y="190" width="220" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="MFg-dM-Gx2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
+                                <state key="normal" title="戻る">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="4yN-zW-pBh" kind="unwind" animates="NO" unwindAction="unwind:" id="BU7-Cq-iro"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Zyf-ow-oLq" firstAttribute="trailing" secondItem="CRl-P2-u4z" secondAttribute="trailing" constant="10" id="19P-uy-nNg"/>
+                            <constraint firstItem="CRl-P2-u4z" firstAttribute="top" secondItem="Zyf-ow-oLq" secondAttribute="top" constant="50" id="IyS-f1-nB6"/>
+                            <constraint firstItem="Zyf-ow-oLq" firstAttribute="trailing" secondItem="CRl-P2-u4z" secondAttribute="trailing" constant="10" id="KuC-XU-Apr"/>
+                            <constraint firstItem="tGo-4G-xod" firstAttribute="top" secondItem="CRl-P2-u4z" secondAttribute="bottom" constant="100" id="cO8-zZ-pUJ"/>
+                            <constraint firstItem="tGo-4G-xod" firstAttribute="leading" secondItem="Zyf-ow-oLq" secondAttribute="leading" constant="50" id="dse-DR-7KM"/>
+                            <constraint firstItem="CRl-P2-u4z" firstAttribute="leading" secondItem="Zyf-ow-oLq" secondAttribute="leading" constant="10" id="hRC-Vh-Ad1"/>
+                            <constraint firstItem="Zyf-ow-oLq" firstAttribute="trailing" secondItem="tGo-4G-xod" secondAttribute="trailing" constant="50" id="qV1-qn-r4T"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Zyf-ow-oLq"/>
+                    </view>
+                    <connections>
+                        <outlet property="labelHello" destination="CRl-P2-u4z" id="WQh-Wu-vcj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8HZ-nH-G1h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="4yN-zW-pBh" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="860.625" y="118.30985915492958"/>
         </scene>
     </scenes>
 </document>

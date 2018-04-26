@@ -12,6 +12,7 @@
 		18A3C31C2091671400C66305 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A3C31A2091671400C66305 /* Main.storyboard */; };
 		18A3C31E2091671500C66305 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18A3C31D2091671500C66305 /* Assets.xcassets */; };
 		18A3C3212091671500C66305 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A3C31F2091671500C66305 /* LaunchScreen.storyboard */; };
+		18A3C3292091701B00C66305 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A3C3282091701B00C66305 /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		18A3C31D2091671500C66305 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18A3C3202091671500C66305 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18A3C3222091671500C66305 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18A3C3282091701B00C66305 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				18A3C3162091671400C66305 /* AppDelegate.swift */,
 				18A3C3182091671400C66305 /* ViewController.swift */,
+				18A3C3282091701B00C66305 /* ResultViewController.swift */,
 				18A3C31A2091671400C66305 /* Main.storyboard */,
 				18A3C31D2091671500C66305 /* Assets.xcassets */,
 				18A3C31F2091671500C66305 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			files = (
 				18A3C3192091671400C66305 /* ViewController.swift in Sources */,
 				18A3C3172091671400C66305 /* AppDelegate.swift in Sources */,
+				18A3C3292091701B00C66305 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +281,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S5K5BLD756;
 				INFOPLIST_FILE = SecondKadaiApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.y.kawa.SecondKadaiApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -292,6 +297,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S5K5BLD756;
 				INFOPLIST_FILE = SecondKadaiApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.y.kawa.SecondKadaiApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
